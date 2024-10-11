@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="onSubmit()">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="text-center"> Login </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-input type="text" placeholder="Nombre de usuario" [(ngModel)]="username" name="username" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password" required></ion-input>
+        </ion-item>
+
+        <ion-button expand="block" type="submit"> Iniciar sesión </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>
